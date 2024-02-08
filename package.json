@@ -1,0 +1,43 @@
+{
+  "name": "tx-validate",
+  "version": "1.0.0",
+  "description": "Tx validate – public task by Vladislav Kozulya",
+  "scripts": {
+    "start": "            ycmd info",
+    "dev": "              ycmd dev",
+    "build": "            ycmd build",
+    "test": "             ycmd test",
+    "test:watch": "       ycmd test --watch",
+    "prepack": "          ycmd prepack",
+    "release": "          ycmd release"
+  },
+  "keywords": [],
+  "author": "Igor Suvorov <hi@isuvorov.com> (https://github.com/isuvorov)",
+  "devDependencies": {
+    "@lsk4/eslint-config": "^4.4.0",
+    "@lsk4/log": "^4.9.0",
+    "@lsk4/tsconfig": "^4.3.0",
+    "@lsk4/tsup-config": "^4.3.0",
+    "@size-limit/preset-small-lib": "^11.0.2",
+    "size-limit": "^11.0.2",
+    "typescript": "^5.3.3",
+    "uvu": "^0.5.6",
+    "ycmd": "^0.17.2"
+  },
+  "prettier": "@lsk4/eslint-config/prettier",
+  "eslintConfig": {
+    "extends": "@lsk4/eslint-config"
+  },
+  "ycmd": {
+    "scripts": [
+      "./scripts",
+      "./node_modules/ycmd/scripts"
+    ]
+  },
+  "_size-limit": [
+    {
+      "path": "lib/index.js",
+      "limit": "1KB"
+    }
+  ]
+}

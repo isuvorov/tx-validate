@@ -1,0 +1,21 @@
+name: Build & Test
+on:
+  pull_request:
+    branches:
+      - main
+env:
+  NODE_VERSION: 21.1.0
+  PNPM_VERSION: 8.15.1
+
+jobs:
+  build-test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: GIT – Checkout
+        uses: actions/checkout@v4
+      - name: PNPM – Install & Build & Test
+        uses: lskjs/action-pnpm@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          pnpm-version: ${{ env.PNPM_VERSION }}
+          command: pnpm test
